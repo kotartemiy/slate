@@ -1,5 +1,5 @@
 ---
-title: API Reference
+title: API Reference meow
 
 language_tabs: # must be one of https://git.io/vQNgJ
   - shell
@@ -21,11 +21,30 @@ code_clipboard: true
 
 # Introduction
 
-Welcome to the Kittn API! You can use our API to access Kittn API endpoints, which can get information on various cats, kittens, and breeds in our database.
+Welcome to the documentation for Free News API by [NewsCatcher](https://newscatcherapi.com/)!
+ 
+<aside class="success">
+This is an absolutely free API for all your non-commercial use cases!
+</aside>
 
-We have language bindings in Shell, Ruby, Python, and JavaScript! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.
+We did it because we saw many developers, indie hackers, students, data scientsts, etc. willing to build something "cool" & non-commercial with news data. 
 
-This example API documentation page was created with [Slate](https://github.com/slatedocs/slate). Feel free to edit it and use it as a base for your own API's documentation.
+Free News API features:
+* unlimited API calls (1 call/second rate limit)
+* ~100,000 news articles per day for contributors (~25,000 by default)
+* filter by keyword, language,  country, source, published time for contributors (just keyword & language by default)
+
+
+
+
+This example API documentation page was created with [Slate](https://github.com/slatedocs/slate). That's a super cool & open-sourced tool to write documentations!
+
+# Contributors
+
+# A list of great projects built with Free News API
+* one
+* two 
+* three
 
 # Authentication
 
