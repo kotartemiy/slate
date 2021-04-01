@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href="images/isolated-monochrome-black-accb880f.png" rel="icon" type="image/png" />
     <title>API Reference</title>
 
     <style media="screen">
@@ -299,7 +300,7 @@
       </span>
     </a>
     <div class="toc-wrapper">
-      <img src="images/logo-1e815a84.png" class="logo" alt="" />
+      # <img src="images/logo.png" class="logo" alt="" />
         <div class="lang-selector">
               <a href="#" data-language-name="shell">shell</a>
               <a href="#" data-language-name="ruby">ruby</a>
@@ -316,12 +317,34 @@
           </li>
           <li>
             <a href="#contributors" class="toc-h1 toc-link" data-title="Contributors">Contributors</a>
-          </li>
-          <li>
-            <a href="#a-list-of-great-projects-built-with-free-news-api" class="toc-h1 toc-link" data-title="A list of great projects built with Free News API">A list of great projects built with Free News API</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#how-to-obtain-quot-contributor-plan-quot" class="toc-h2 toc-link" data-title="How to obtain "Contributor Plan"">How to obtain "Contributor Plan"</a>
+                  </li>
+              </ul>
           </li>
           <li>
             <a href="#authentication" class="toc-h1 toc-link" data-title="Authentication">Authentication</a>
+          </li>
+          <li>
+            <a href="#example-call" class="toc-h1 toc-link" data-title="Example Call">Example Call</a>
+          </li>
+          <li>
+            <a href="#example-response-object" class="toc-h1 toc-link" data-title="Example Response Object">Example Response Object</a>
+          </li>
+          <li>
+            <a href="#api-specs" class="toc-h1 toc-link" data-title="API Specs">API Specs</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#request-parameters" class="toc-h2 toc-link" data-title="Request Parameters">Request Parameters</a>
+                  </li>
+                  <li>
+                    <a href="#return-body" class="toc-h2 toc-link" data-title="Return Body">Return Body</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#debugging" class="toc-h1 toc-link" data-title="Debugging">Debugging</a>
           </li>
           <li>
             <a href="#kittens" class="toc-h1 toc-link" data-title="Kittens">Kittens</a>
@@ -337,69 +360,717 @@
                   </li>
               </ul>
           </li>
-          <li>
-            <a href="#errors" class="toc-h1 toc-link" data-title="Errors">Errors</a>
-          </li>
       </ul>
         <ul class="toc-footer">
-            <li><a href='#'>Sign Up for a Developer Key</a></li>
+            <li><a href='https://rapidapi.com/newscatcher-api-newscatcher-api-default/api/free-news/pricing'>Sign Up for a Developer Key</a></li>
             <li><a href='https://github.com/slatedocs/slate'>Documentation Powered by Slate</a></li>
         </ul>
     </div>
     <div class="page-wrapper">
       <div class="dark-box"></div>
       <div class="content">
-        <h1 id='introduction'>Introduction</h1>
+        <h1 id='introduction'>Introduction</h1><div class="highlight"><pre class="highlight plaintext"><code>█▀▀ █▀█ █▀▀ █▀▀   █▄░█ █▀▀ █░█░█ █▀   ▄▀█ █▀█ █  
+█▀░ █▀▄ ██▄ ██▄   █░▀█ ██▄ ▀▄▀▄▀ ▄█   █▀█ █▀▀ █  
+
+█▄▄ █▄█   █▄░█ █▀▀ █░█░█ █▀ █▀▀ ▄▀█ ▀█▀ █▀▀ █░█ █▀▀ █▀█
+█▄█ ░█░   █░▀█ ██▄ ▀▄▀▄▀ ▄█ █▄▄ █▀█ ░█░ █▄▄ █▀█ ██▄ █▀▄
+</code></pre></div>
 <p>Welcome to the documentation for Free News API by <a href="https://newscatcherapi.com/">NewsCatcher</a>!</p>
 
 <aside class="success">
-This is an absolutely free API for all your non-commercial use cases!
+This is an absolutely free API for all your non-commercial use cases! No credit card required to subscribe.
 </aside>
 
 <p>We did it because we saw many developers, indie hackers, students, data scientsts, etc. willing to build something &quot;cool&quot; &amp; non-commercial with news data. </p>
 
-<p>Free News API features:
-* unlimited API calls (1 call/second rate limit)
-* ~100,000 news articles per day for contributors (~25,000 by default)
-* filter by keyword, language,  country, source, published time for contributors (just keyword &amp; language by default)</p>
+<p>Free News API features:</p>
+
+<ul>
+<li>unlimited API calls (1 call/second rate limit)</li>
+<li>~80,000 news articles per day for <a href="#contributors">contributors</a> (~40,000 for basic users)</li>
+<li>filter by keyword, language,  country, source, published time for contributors (just keyword &amp; language by default)</li>
+</ul>
+
+<aside class="warning">This API is in the test mode until the May 1st. Historical data (news articles) begins from the 1st of April.</aside>
 
 <p>This example API documentation page was created with <a href="https://github.com/slatedocs/slate">Slate</a>. That&#39;s a super cool &amp; open-sourced tool to write documentations!</p>
-<h1 id='contributors'>Contributors</h1><h1 id='a-list-of-great-projects-built-with-free-news-api'>A list of great projects built with Free News API</h1>
-<ul>
-<li>one</li>
-<li>two </li>
-<li>three</li>
-</ul>
+<h1 id='contributors'>Contributors</h1><div class="highlight"><pre class="highlight plaintext"><code>█░█ █▀█ █░█░█   ▀█▀ █▀█   █▄▄ █▀▀ █▀▀ █▀█ █▀▄▀█ █▀▀
+█▀█ █▄█ ▀▄▀▄▀   ░█░ █▄█   █▄█ ██▄ █▄▄ █▄█ █░▀░█ ██▄
+
+▄▀█   █▀█ █▀█ █░█░█ █▀▀ █▀█   █░█ █▀ █▀▀ █▀█
+█▀█   █▀▀ █▄█ ▀▄▀▄▀ ██▄ █▀▄   █▄█ ▄█ ██▄ █▀▄
+</code></pre></div>
+<p>&quot;Contributors&quot; have more access to the Free News API. </p>
+
+<table><thead>
+<tr>
+<th><strong>Feature</strong></th>
+<th style="text-align: center">Contributor Plan</th>
+<th style="text-align: center">Basic Plan</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>API Calls</strong></td>
+<td style="text-align: center">unlimited</td>
+<td style="text-align: center">unlimited</td>
+</tr>
+<tr>
+<td><strong>Request Rate</strong></td>
+<td style="text-align: center">can be increased on demand</td>
+<td style="text-align: center">1 req/sec</td>
+</tr>
+<tr>
+<td><strong>Sources</strong></td>
+<td style="text-align: center">~top 250<br>(~40k articles/day)</td>
+<td style="text-align: center">~top 500<br>(~800k articles/day)</td>
+</tr>
+<tr>
+<td><strong>Filters</strong></td>
+<td style="text-align: center">ALL</td>
+<td style="text-align: center"><code>q</code> and <code>lang</code> only</td>
+</tr>
+<tr>
+<td><strong>Articles/call</strong></td>
+<td style="text-align: center">100 max (50 default)</td>
+<td style="text-align: center">25 max (25 default)</td>
+</tr>
+<tr>
+<td><strong>Historical Data</strong></td>
+<td style="text-align: center">Up to 1 month old</td>
+<td style="text-align: center">Up to 1 week old</td>
+</tr>
+</tbody></table>
+<h2 id='how-to-obtain-quot-contributor-plan-quot'>How to obtain &quot;Contributor Plan&quot;</h2>
+<ol>
+<li>Fill the <a href="#">form</a>. It will take you approx 5 mins to complete</li>
+<li>You will be invited to the plan within 24 business hours</li>
+</ol>
+
+<!-- # A list of great projects built with Free News API
+* one
+* two 
+* three -->
 <h1 id='authentication'>Authentication</h1>
-<blockquote>
-<p>To authorize, use this code:</p>
-</blockquote>
-<div class="highlight"><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
+<p>Authentication is done via RapidAPI. You will receive an API key that you&#39;d have to pass into a <code>HEADER</code></p>
 
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-</code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
+<ol>
+<li>Create a <a href="https://rapidapi.com/">RapidAPI</a> account. Go to  <strong><a href="https://rapidapi.com/">rapidapi.com</a></strong>. You can sign up using email, Google, Github, or Facebook.</li>
+<li> Go to the <strong>Pricing page</strong> of the <a href="https://rapidapi.com/newscatcher-api-newscatcher-api-default/api/free-news/pricing">Free News API</a>. Choose a <strong>Basic Plan</strong>. Just click on <strong>Select Plan</strong> button. That&#39;s it.</li>
+<li>Go to <strong><em>Endpoint</em></strong> tab. Test any endpoint. You can choose Code Snippet for almost any programming language or terminal. Your unique API key will be already pasted.</li>
+</ol>
+<h1 id='example-call'>Example Call</h1><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="nt">--request</span> GET <span class="se">\</span>
+    <span class="nt">--url</span> <span class="s1">'https://free-news.p.rapidapi.com/v1/search?q=bitcoin&amp;lang=en&amp;page=1&amp;page_size=25'</span> <span class="se">\</span>
+    <span class="nt">--header</span> <span class="s1">'x-rapidapi-host: free-news.p.rapidapi.com'</span> <span class="se">\</span>
+    <span class="nt">--header</span> <span class="s1">'x-rapidapi-key: &lt;YOUR API KEY&gt;'</span>
+</code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="p">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-</code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code><span class="c"># With shell, you can just pass the correct header with each request</span>
-curl <span class="s2">"api_endpoint_here"</span> <span class="se">\</span>
-  <span class="nt">-H</span> <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">kittn</span><span class="dl">'</span><span class="p">);</span>
+<span class="n">url</span> <span class="o">=</span> <span class="s">"https://free-news.p.rapidapi.com/v1/search"</span>
 
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="dl">'</span><span class="s1">meowmeowmeow</span><span class="dl">'</span><span class="p">);</span>
+<span class="n">querystring</span> <span class="o">=</span> <span class="p">{</span><span class="s">"q"</span><span class="p">:</span><span class="s">"bitcoin"</span><span class="p">,</span><span class="s">"lang"</span><span class="p">:</span><span class="s">"en"</span><span class="p">,</span><span class="s">"page"</span><span class="p">:</span><span class="s">"1"</span><span class="p">,</span><span class="s">"page_size"</span><span class="p">:</span><span class="s">"25"</span><span class="p">}</span>
+
+<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s">'x-rapidapi-key'</span><span class="p">:</span> <span class="s">"&lt;YOUR API KEY&gt;"</span><span class="p">,</span>
+    <span class="s">'x-rapidapi-host'</span><span class="p">:</span> <span class="s">"free-news.p.rapidapi.com"</span>
+    <span class="p">}</span>
+
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="p">.</span><span class="n">request</span><span class="p">(</span><span class="s">"GET"</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">querystring</span><span class="p">)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">text</span><span class="p">)</span>
+</code></pre></div><div class="highlight"><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'uri'</span>
+<span class="nb">require</span> <span class="s1">'net/http'</span>
+<span class="nb">require</span> <span class="s1">'openssl'</span>
+
+<span class="n">url</span> <span class="o">=</span> <span class="no">URI</span><span class="p">(</span><span class="s2">"https://free-news.p.rapidapi.com/v1/search?q=bitcoin&amp;lang=en&amp;page=1&amp;page_size=25"</span><span class="p">)</span>
+
+<span class="n">http</span> <span class="o">=</span> <span class="no">Net</span><span class="o">::</span><span class="no">HTTP</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="n">url</span><span class="p">.</span><span class="nf">host</span><span class="p">,</span> <span class="n">url</span><span class="p">.</span><span class="nf">port</span><span class="p">)</span>
+<span class="n">http</span><span class="p">.</span><span class="nf">use_ssl</span> <span class="o">=</span> <span class="kp">true</span>
+<span class="n">http</span><span class="p">.</span><span class="nf">verify_mode</span> <span class="o">=</span> <span class="no">OpenSSL</span><span class="o">::</span><span class="no">SSL</span><span class="o">::</span><span class="no">VERIFY_NONE</span>
+
+<span class="n">request</span> <span class="o">=</span> <span class="no">Net</span><span class="o">::</span><span class="no">HTTP</span><span class="o">::</span><span class="no">Get</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+<span class="n">request</span><span class="p">[</span><span class="s2">"x-rapidapi-key"</span><span class="p">]</span> <span class="o">=</span> <span class="s1">'&lt;YOUR API KEY&gt;'</span>
+<span class="n">request</span><span class="p">[</span><span class="s2">"x-rapidapi-host"</span><span class="p">]</span> <span class="o">=</span> <span class="s1">'free-news.p.rapidapi.com'</span>
+
+<span class="n">response</span> <span class="o">=</span> <span class="n">http</span><span class="p">.</span><span class="nf">request</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
+<span class="nb">puts</span> <span class="n">response</span><span class="p">.</span><span class="nf">read_body</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="k">import</span> <span class="nx">axios</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">axios</span><span class="dl">"</span><span class="p">;</span>
+
+<span class="kd">const</span> <span class="nx">options</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">method</span><span class="p">:</span> <span class="dl">'</span><span class="s1">GET</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">url</span><span class="p">:</span> <span class="dl">'</span><span class="s1">https://free-news.p.rapidapi.com/v1/search</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">params</span><span class="p">:</span> <span class="p">{</span><span class="na">q</span><span class="p">:</span> <span class="dl">'</span><span class="s1">bitcoin</span><span class="dl">'</span><span class="p">,</span> <span class="na">lang</span><span class="p">:</span> <span class="dl">'</span><span class="s1">en</span><span class="dl">'</span><span class="p">,</span> <span class="na">page</span><span class="p">:</span> <span class="dl">'</span><span class="s1">1</span><span class="dl">'</span><span class="p">,</span> <span class="na">page_size</span><span class="p">:</span> <span class="dl">'</span><span class="s1">25</span><span class="dl">'</span><span class="p">},</span>
+  <span class="na">headers</span><span class="p">:</span> <span class="p">{</span>
+    <span class="dl">'</span><span class="s1">x-rapidapi-key</span><span class="dl">'</span><span class="p">:</span> <span class="dl">'</span><span class="s1">&lt;YOUR API KEY&gt;</span><span class="dl">'</span><span class="p">,</span>
+    <span class="dl">'</span><span class="s1">x-rapidapi-host</span><span class="dl">'</span><span class="p">:</span> <span class="dl">'</span><span class="s1">free-news.p.rapidapi.com</span><span class="dl">'</span>
+  <span class="p">}</span>
+<span class="p">};</span>
+
+<span class="nx">axios</span><span class="p">.</span><span class="nx">request</span><span class="p">(</span><span class="nx">options</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
+<span class="p">}).</span><span class="k">catch</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">error</span><span class="p">);</span>
+<span class="p">});</span>
 </code></pre></div>
 <blockquote>
-<p>Make sure to replace <code>meowmeowmeow</code> with your API key.</p>
+<p>Make sure to replace <code>&lt;YOUR API KEY&gt;</code> with your API key.</p>
 </blockquote>
 
-<p>Kittn uses API keys to allow access to the API. You can register a new Kittn API key at our <a href="http://example.com/developers">developer portal</a>.</p>
+<p>An example of a call that search for all mentions of &#39;bitcoin&#39; in English articles</p>
+<h1 id='example-response-object'>Example Response Object</h1>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ok"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"total_hits"</span><span class="p">:</span><span class="w"> </span><span class="mi">430</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"page"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"total_pages"</span><span class="p">:</span><span class="w"> </span><span class="mi">215</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"page_size"</span><span class="p">:</span><span class="w"> </span><span class="mi">25</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"articles"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"bitcoin: Moving beyond Bitcoin to the next crypto revolution in 2021"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"author"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"published_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2021-03-31 10:29:00"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"published_date_precision"</span><span class="p">:</span><span class="w"> </span><span class="s2">"full"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"link"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://economictimes.indiatimes.com/markets/stocks/news/moving-beyond-bitcoin-to-the-next-crypto-revolution-in-2021/articleshow/81773999.cms"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"clean_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"indiatimes.com"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"summary"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ET Spotlight SpecialThe dramatic rise in Bitcoin value has put cryptocurrency on the map in the investment space. Since its inception - not over a decade ago, Bitcoin has surpassed great heights in terms of value. It is the biggest cryptocurrency</span><span class="se">\n</span><span class="s2"> with a $1 trillion economy. While Bitcoin is the largest cryptocurrency, there are over 5000+ cryptocurrencies currently in circulation, many of which are listed on the CoinSwitch</span><span class="se">\n</span><span class="s2"> Kuber app. However, most people are unaware of these currencies. Severa"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"rights"</span><span class="p">:</span><span class="w"> </span><span class="s2">"indiatimes.com"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"rank"</span><span class="p">:</span><span class="w"> </span><span class="mi">325</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"topic"</span><span class="p">:</span><span class="w"> </span><span class="s2">"economics"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"IN"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"language"</span><span class="p">:</span><span class="w"> </span><span class="s2">"en"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"authors"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+            </span><span class="nl">"media"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://img.etimg.com/thumb/msid-81773937,width-1070,height-580,imgsize-101309,overlay-etmarkets/photo.jpg"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"is_opinion"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"twitter_account"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@EconomicTimes"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"_score"</span><span class="p">:</span><span class="w"> </span><span class="mf">10.445324</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"d249a630bc9e1b76287940503041b1f4"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Bitcoin and the Future of Decentralized Finance"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"author"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"published_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2021-03-31 12:58:12"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"published_date_precision"</span><span class="p">:</span><span class="w"> </span><span class="s2">"full"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"link"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://hbr.org/podcast/2021/03/bitcoin-and-the-future-of-decentralized-finance"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"clean_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"hbr.org"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"summary"</span><span class="p">:</span><span class="w"> </span><span class="s2">"You have 1 free articles left this month. You are reading your last free article for this month. Create an account to read 2 more. </span><span class="se">\n</span><span class="s2"> </span><span class="se">\n\n</span><span class="s2"> March 31, 2021 Meltem Demirors, Chief Strategy Officer at CoinShares, joins Azeem Azhar to explore the potential and politics of cryptocurrencies: from the ideological origins of Bitcoin to the new wave of decentralized financial products that could disrupt traditional finance.</span><span class="se">\n</span><span class="s2">They also discuss:</span><span class="se">\n\n</span><span class="s2">Why the values of the Cypherpunk community are enshrined in Bitco"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"rights"</span><span class="p">:</span><span class="w"> </span><span class="s2">"hbr.org"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"rank"</span><span class="p">:</span><span class="w"> </span><span class="mi">273</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"topic"</span><span class="p">:</span><span class="w"> </span><span class="s2">"news"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"country"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"language"</span><span class="p">:</span><span class="w"> </span><span class="s2">"en"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"authors"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+            </span><span class="nl">"media"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://hbr.org/resources/images/article_assets/2019/04/Exponential_View-WordPress.png"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"is_opinion"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"twitter_account"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@harvardbiz"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"_score"</span><span class="p">:</span><span class="w"> </span><span class="mf">10.325988</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"9380a6166913f551633fb7095fd9ded9"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="nl">"user_input"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"q"</span><span class="p">:</span><span class="w"> </span><span class="s2">"bitcoin"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"lang"</span><span class="p">:</span><span class="w"> </span><span class="s2">"en"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"from"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2021-03-25 00:00:00"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"sort_by"</span><span class="p">:</span><span class="w"> </span><span class="s2">"relevancy"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"page"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"size"</span><span class="p">:</span><span class="w"> </span><span class="mi">25</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div><h1 id='api-specs'>API Specs</h1><div class="highlight"><pre class="highlight plaintext"><code>▄▀█ █▀█ █   █▀ █▀█ █▀▀ █▀▀ █▀
+█▀█ █▀▀ █   ▄█ █▀▀ ██▄ █▄▄ ▄█
+</code></pre></div>
+<p>There is only one endpoint called &#39;search&#39;</p>
 
-<p>Kittn expects for the API key to be included in all API requests to the server in a header that looks like the following:</p>
+<hr>
+<h2 id='request-parameters'>Request Parameters</h2>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th style="text-align: center">Type</th>
+<th>Format, Examples</th>
+<th>Description</th>
+<th style="text-align: center">Basic Plan</th>
+<th style="text-align: center">Contributor Plan</th>
+<th></th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>q</code></td>
+<td style="text-align: center"><em>string</em></td>
+<td>See Advanced Querying section below</td>
+<td>What you are searching for</td>
+<td style="text-align: center">[x]</td>
+<td style="text-align: center">[x]</td>
+<td></td>
+</tr>
+<tr>
+<td><code>lang</code></td>
+<td style="text-align: center"><em>string</em></td>
+<td></td>
+<td>Specifies the language of the search.<br><br>language formats below(#langformats)</td>
+<td style="text-align: center">[x]</td>
+<td style="text-align: center">[x]</td>
+<td></td>
+</tr>
+<tr>
+<td><code>search_in</code></td>
+<td style="text-align: center"><em>string</em></td>
+<td></td>
+<td>By default, we search what you specified in q in both title and summary of the article. <br>However, you can limit this to either <code>title</code> or <code>summary</code></td>
+<td style="text-align: center">[ ]</td>
+<td style="text-align: center">[x]</td>
+<td></td>
+</tr>
+<tr>
+<td><code>from</code></td>
+<td style="text-align: center"><em>datetime</em></td>
+<td></td>
+<td>From which point in time to start the search. No specific format is required.<br>Default timezone is UTC</td>
+<td style="text-align: center">[ ]</td>
+<td style="text-align: center">[x]</td>
+<td></td>
+</tr>
+<tr>
+<td><code>to</code></td>
+<td style="text-align: center"><em>datetime</em></td>
+<td></td>
+<td>Until which point in time to search for. Default timezone is UTC</td>
+<td style="text-align: center">[ ]</td>
+<td style="text-align: center">[x]</td>
+<td></td>
+</tr>
+<tr>
+<td><code>country</code></td>
+<td style="text-align: center"><em>string</em></td>
+<td>2-letter<br>code. US, for example.</td>
+<td>Country to which you want to narrow your search. This parameter is [experimental]. <br>We advise you to use it in conjunction with the <code>lang</code> parameter.</td>
+<td style="text-align: center">[ ]</td>
+<td style="text-align: center">[x]</td>
+<td></td>
+</tr>
+<tr>
+<td><code>topic</code></td>
+<td style="text-align: center"><em>string</em></td>
+<td><code>news</code>, <code>sport</code>, <br><code>tech</code>, <code>world</code>, <br><code>finance</code>, <code>politics</code>, <br><code>business</code>, <code>economics</code>, <code>entertainment</code></td>
+<td>The topic to which you want to restrict the articles of your choice. <br>This parameter is [experimental].</td>
+<td style="text-align: center">[ ]</td>
+<td style="text-align: center">[x]</td>
+<td></td>
+</tr>
+<tr>
+<td><code>sources</code></td>
+<td style="text-align: center"><em>list</em></td>
+<td><code>source1</code>,<code>source2</code>, <code>source3</code>, <br>or <code>source1</code> if only 1 source</td>
+<td>One or more news resources to filter your search. <br>It should be the normal form of the URL, for example, nytimes.com, theguardian.com</td>
+<td style="text-align: center">[ ]</td>
+<td style="text-align: center">[x]</td>
+<td></td>
+</tr>
+<tr>
+<td><code>page</code></td>
+<td style="text-align: center"><em>int</em></td>
+<td></td>
+<td>Number of the page. Use it to scroll through the results.</td>
+<td style="text-align: center">[x]</td>
+<td style="text-align: center">[x]</td>
+<td></td>
+</tr>
+<tr>
+<td><code>page_size</code></td>
+<td style="text-align: center"><em>int</em></td>
+<td></td>
+<td>How many articles to return per page.</td>
+<td style="text-align: center">[x]</td>
+<td style="text-align: center">[x]</td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id='advanced-querying'>Advanced Querying</h3>
+<ul>
+<li><strong>Exact Match (&quot;quotes&quot;)</strong></li>
+</ul>
 
-<p><code>Authorization: meowmeowmeow</code></p>
+<p>Use double quotes for <strong>exact match</strong>.</p>
 
-<aside class="notice">
-You must replace <code>meowmeowmeow</code> with your personal API key.
-</aside>
+<p>When you want to search for the English (<code>lang=en</code>) articles that mention <code>Tim Cook</code> you should do the following query:</p>
+
+<p><code>q=&quot;Tim Cook&quot;</code></p>
+
+<p>If you write <code>q=Tim Cook</code> then, it will bee treated as <code>q=Tim OR Cook</code>. In that case, every article that mentions <code>tim</code> or <code>cook</code> will match. </p>
+
+<p>Moreover, if you specify <code>lang=en</code> that will also match the articles with <code>cooking</code>, <code>cooked</code>, and other stems of word <code>cook</code></p>
+
+<ul>
+<li><strong>Boolean: AND</strong>
+<code>AND</code> can also be written as <code>&amp;&amp;</code></li>
+</ul>
+
+<p><code>AND</code> operator makes tokens from both sides to be present in the text. For example, if we want both <code>Microsoft</code> and <code>Tesla</code> to be present in the returned news articles, our <code>q</code> parameter should look as follows:</p>
+
+<p><code>q=Microsoft AND Tesla</code> </p>
+
+<p>or </p>
+
+<p><code>q=Microsoft &amp;&amp; Tesla</code></p>
+
+<ul>
+<li><strong>Boolean: OR</strong></li>
+</ul>
+
+<p><code>OR</code> can also be written as <code>||</code></p>
+
+<p><code>OR</code> operator means that either the left or the right sides of <code>OR</code> have to be satisfied. </p>
+
+<p><code>OR</code> is the default operator. When your <code>q</code> input is more than 1 word, <code>OR</code> operator is added between each word behind the scenes. Therefore, <code>Apple Microsoft Tesla</code> is the same as <code>Apple OR Microsoft OR Tesla</code></p>
+
+<p>You should use <strong>Grouping</strong> when you want to logically group a set of tokens. For example:</p>
+
+<p><code>q=(Apple AND Cook) OR (Microsoft AND Gates)</code></p>
+
+<p>or</p>
+
+<p><code>q=(Apple &amp;&amp; Cook) || (Microsoft &amp;&amp; Gates)</code></p>
+
+<ul>
+<li><strong>Boolean: NOT</strong></li>
+</ul>
+
+<p><code>NOT</code> can also be written as <code>!</code></p>
+
+<p>Use <code>NOT</code> operator when you want the token from its right to not be present. For example, if we want to search for articles about <code>Microsoft</code> and <strong>not</strong> about <code>Tesla</code>, our <code>q</code> parameter should look as follows:</p>
+
+<p><code>q=Microsoft NOT Tesla</code></p>
+
+<p>or </p>
+
+<p><code>q=Microsoft !Tesla</code></p>
+
+<ul>
+<li><strong>MUST (+) &amp; MUST NOT (-)</strong></li>
+</ul>
+
+<p>Prepend a token with a <code>+</code> sign if it <strong>MUST</strong> appear in the searched text</p>
+
+<p>Make sure that your API call is URL encoded. Check the <code>user_input</code> object in the Response Body to see how our back-end saw your request.</p>
+
+<p><code>+</code> <strong>will be escaped by default in many situations.</strong></p>
+
+<p>Prepend a token with a <code>-</code> sign if it <strong>MUST NOT</strong> appear in the searched text</p>
+
+<p>For example, if we want to search for news articles that contain <code>Elon Musk</code> but not <code>Grimes</code>, we have to write:</p>
+
+<p><code>q=Elon Musk -Grimes</code></p>
+
+<p>&quot;But wait, the query above will also match the documents where only <code>Elon</code> or <code>Musk</code>  are present&quot; Shouldn&#39;t we write <code>+Elon +Musk -Grimes</code> ?</p>
+
+<p>If we write <code>+Elon +Musk -Grimes</code> that will mean that <code>Elon</code> and <code>Musk</code> should be present in the text, however, not in that particular. The &quot;correct&quot; query should look like this:</p>
+
+<p><code>q=&quot;Elon Musk&quot; -Grimes</code></p>
+
+<p>In this case, we will search for exact match of <code>&quot;Elon Musk&quot;</code> , plus, <code>Grimes</code> must not be present. </p>
+
+<p><strong>Pro Tip</strong>. In general, you should always put person and company names into quotes</p>
+
+<hr>
+<h2 id='return-body'>Return Body</h2>
+<blockquote>
+<p>JSON return body example:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ok"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"total_hits"</span><span class="p">:</span><span class="w"> </span><span class="mi">430</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"page"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"total_pages"</span><span class="p">:</span><span class="w"> </span><span class="mi">215</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"page_size"</span><span class="p">:</span><span class="w"> </span><span class="mi">25</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"articles"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"bitcoin: Moving beyond Bitcoin to the next crypto revolution in 2021"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"author"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"published_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2021-03-31 10:29:00"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"published_date_precision"</span><span class="p">:</span><span class="w"> </span><span class="s2">"full"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"link"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://economictimes.indiatimes.com/markets/stocks/news/moving-beyond-bitcoin-to-the-next-crypto-revolution-in-2021/articleshow/81773999.cms"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"clean_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"indiatimes.com"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"summary"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ET Spotlight SpecialThe dramatic rise in Bitcoin value has put cryptocurrency on the map in the investment space. Since its inception - not over a decade ago, Bitcoin has surpassed great heights in terms of value. It is the biggest cryptocurrency</span><span class="se">\n</span><span class="s2"> with a $1 trillion economy. While Bitcoin is the largest cryptocurrency, there are over 5000+ cryptocurrencies currently in circulation, many of which are listed on the CoinSwitch</span><span class="se">\n</span><span class="s2"> Kuber app. However, most people are unaware of these currencies. Severa"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"rights"</span><span class="p">:</span><span class="w"> </span><span class="s2">"indiatimes.com"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"rank"</span><span class="p">:</span><span class="w"> </span><span class="mi">325</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"topic"</span><span class="p">:</span><span class="w"> </span><span class="s2">"economics"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"IN"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"language"</span><span class="p">:</span><span class="w"> </span><span class="s2">"en"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"authors"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+            </span><span class="nl">"media"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://img.etimg.com/thumb/msid-81773937,width-1070,height-580,imgsize-101309,overlay-etmarkets/photo.jpg"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"is_opinion"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"twitter_account"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@EconomicTimes"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"_score"</span><span class="p">:</span><span class="w"> </span><span class="mf">10.445324</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"d249a630bc9e1b76287940503041b1f4"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Bitcoin and the Future of Decentralized Finance"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"author"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"published_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2021-03-31 12:58:12"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"published_date_precision"</span><span class="p">:</span><span class="w"> </span><span class="s2">"full"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"link"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://hbr.org/podcast/2021/03/bitcoin-and-the-future-of-decentralized-finance"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"clean_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"hbr.org"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"summary"</span><span class="p">:</span><span class="w"> </span><span class="s2">"You have 1 free articles left this month. You are reading your last free article for this month. Create an account to read 2 more. </span><span class="se">\n</span><span class="s2"> </span><span class="se">\n\n</span><span class="s2"> March 31, 2021 Meltem Demirors, Chief Strategy Officer at CoinShares, joins Azeem Azhar to explore the potential and politics of cryptocurrencies: from the ideological origins of Bitcoin to the new wave of decentralized financial products that could disrupt traditional finance.</span><span class="se">\n</span><span class="s2">They also discuss:</span><span class="se">\n\n</span><span class="s2">Why the values of the Cypherpunk community are enshrined in Bitco"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"rights"</span><span class="p">:</span><span class="w"> </span><span class="s2">"hbr.org"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"rank"</span><span class="p">:</span><span class="w"> </span><span class="mi">273</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"topic"</span><span class="p">:</span><span class="w"> </span><span class="s2">"news"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"country"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"language"</span><span class="p">:</span><span class="w"> </span><span class="s2">"en"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"authors"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+            </span><span class="nl">"media"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://hbr.org/resources/images/article_assets/2019/04/Exponential_View-WordPress.png"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"is_opinion"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"twitter_account"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@harvardbiz"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"_score"</span><span class="p">:</span><span class="w"> </span><span class="mf">10.325988</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"9380a6166913f551633fb7095fd9ded9"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="nl">"user_input"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"q"</span><span class="p">:</span><span class="w"> </span><span class="s2">"bitcoin"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"lang"</span><span class="p">:</span><span class="w"> </span><span class="s2">"en"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"from"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2021-03-25 00:00:00"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"sort_by"</span><span class="p">:</span><span class="w"> </span><span class="s2">"relevancy"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"page"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"size"</span><span class="p">:</span><span class="w"> </span><span class="mi">25</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<table><thead>
+<tr>
+<th>Object</th>
+<th>Sub Object</th>
+<th>Description</th>
+<th>Open</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>status</td>
+<td></td>
+<td>Returns ok if everything went well.   Returns error in case of an error (plus 2 additional fields in case of error — error_code and message)</td>
+<td></td>
+</tr>
+<tr>
+<td>total_hits</td>
+<td></td>
+<td>How many news articles match your search criterion. Maximum is 10,000</td>
+<td></td>
+</tr>
+<tr>
+<td>page</td>
+<td></td>
+<td>Page where you are at</td>
+<td></td>
+</tr>
+<tr>
+<td>total_pages</td>
+<td></td>
+<td>How many pages you can access given your page_size parameter</td>
+<td></td>
+</tr>
+<tr>
+<td>page_size</td>
+<td></td>
+<td>How many items are present in articles object</td>
+<td></td>
+</tr>
+<tr>
+<td>articles:</td>
+<td></td>
+<td>News articles found. list</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><code>summary</code></td>
+<td>first 500 characters of the article body</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><code>country</code></td>
+<td>Country of the publisher [experimental]</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><code>clean_url</code></td>
+<td>URL of the article&#39;s source</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><code>author</code></td>
+<td>Author of the article</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><code>rights</code></td>
+<td>Copyright</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><code>media</code></td>
+<td>Thumbnail media of the article</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><code>link</code></td>
+<td>Full URL of the article</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><code>rank</code></td>
+<td>Rank of the source website (clean_url)</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><code>topic</code></td>
+<td>Topic of the article [experimental]</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><code>language</code></td>
+<td>Language of the article</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><code>title</code></td>
+<td>Title of the article</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><code>published_date_precision</code></td>
+<td>Shows how well we think we detected the published date</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><code>published_date</code></td>
+<td>Published date &amp; time</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><code>_id</code></td>
+<td>Newscatcher API&#39;s unique identifier for each news article</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><code>_score</code></td>
+<td>How well the article is matching your search criteria. _score is different for each search you make. The best matching article has the highest score</td>
+<td></td>
+</tr>
+<tr>
+<td>user_input:</td>
+<td></td>
+<td>Object that returns how our backend saw your request. It shows you which parameters have been used to perform a search. Useful for debugging, especially to check if there is any problem with URL encoding. list</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>q</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>search_in</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>lang</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>country</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>from</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>to</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>ranked_only</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>from_rank</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>to_rank</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>sort_by</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>page</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>size</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>sources</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>not_sources</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>topic</td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h1 id='debugging'>Debugging</h1>
+<p>Internally, we try to catch all the problems that might arise with your search. You have to worry only when you get error code <code>400</code> because that (usually) means that you did something wrong. We will return an error message that should help you understand what went wrong.</p>
+
+<p>If you see a <code>500</code> status code — that means that something is wrong on our side.</p>
+
+<p>While developing, look at <code>user_input</code> object that returns all of your parameters. If you made a mistake, or some characters were not correctly parsed because of the URL-encoding, you will see that.</p>
 <h1 id='kittens'>Kittens</h1><h2 id='get-all-kittens'>Get All Kittens</h2><div class="highlight"><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
 
 <span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
@@ -541,64 +1212,6 @@ Remember — a happy kitten is an authenticated kitten!
 <tr>
 <td>ID</td>
 <td>The ID of the kitten to delete</td>
-</tr>
-</tbody></table>
-<h1 id='errors'>Errors</h1>
-<aside class="notice">
-This error section is stored in a separate file in <code>includes/_errors.md</code>. Slate allows you to optionally separate out your docs into many files...just save them to the <code>includes</code> folder and add them to the top of your <code>index.md</code>'s frontmatter. Files are included in the order listed.
-</aside>
-
-<p>The Kittn API uses the following error codes:</p>
-
-<table><thead>
-<tr>
-<th>Error Code</th>
-<th>Meaning</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>400</td>
-<td>Bad Request -- Your request is invalid.</td>
-</tr>
-<tr>
-<td>401</td>
-<td>Unauthorized -- Your API key is wrong.</td>
-</tr>
-<tr>
-<td>403</td>
-<td>Forbidden -- The kitten requested is hidden for administrators only.</td>
-</tr>
-<tr>
-<td>404</td>
-<td>Not Found -- The specified kitten could not be found.</td>
-</tr>
-<tr>
-<td>405</td>
-<td>Method Not Allowed -- You tried to access a kitten with an invalid method.</td>
-</tr>
-<tr>
-<td>406</td>
-<td>Not Acceptable -- You requested a format that isn&#39;t json.</td>
-</tr>
-<tr>
-<td>410</td>
-<td>Gone -- The kitten requested has been removed from our servers.</td>
-</tr>
-<tr>
-<td>418</td>
-<td>I&#39;m a teapot.</td>
-</tr>
-<tr>
-<td>429</td>
-<td>Too Many Requests -- You&#39;re requesting too many kittens! Slow down!</td>
-</tr>
-<tr>
-<td>500</td>
-<td>Internal Server Error -- We had a problem with our server. Try again later.</td>
-</tr>
-<tr>
-<td>503</td>
-<td>Service Unavailable -- We&#39;re temporarily offline for maintenance. Please try again later.</td>
 </tr>
 </tbody></table>
 
