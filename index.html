@@ -346,20 +346,6 @@
           <li>
             <a href="#debugging" class="toc-h1 toc-link" data-title="Debugging">Debugging</a>
           </li>
-          <li>
-            <a href="#kittens" class="toc-h1 toc-link" data-title="Kittens">Kittens</a>
-              <ul class="toc-list-h2">
-                  <li>
-                    <a href="#get-all-kittens" class="toc-h2 toc-link" data-title="Get All Kittens">Get All Kittens</a>
-                  </li>
-                  <li>
-                    <a href="#get-a-specific-kitten" class="toc-h2 toc-link" data-title="Get a Specific Kitten">Get a Specific Kitten</a>
-                  </li>
-                  <li>
-                    <a href="#delete-a-specific-kitten" class="toc-h2 toc-link" data-title="Delete a Specific Kitten">Delete a Specific Kitten</a>
-                  </li>
-              </ul>
-          </li>
       </ul>
         <ul class="toc-footer">
             <li><a href='https://rapidapi.com/newscatcher-api-newscatcher-api-default/api/free-news/pricing'>Sign Up for a Developer Key</a></li>
@@ -371,9 +357,6 @@
       <div class="content">
         <h1 id='introduction'>Introduction</h1><div class="highlight"><pre class="highlight plaintext"><code>█▀▀ █▀█ █▀▀ █▀▀   █▄░█ █▀▀ █░█░█ █▀   ▄▀█ █▀█ █  
 █▀░ █▀▄ ██▄ ██▄   █░▀█ ██▄ ▀▄▀▄▀ ▄█   █▀█ █▀▀ █  
-
-█▄▄ █▄█   █▄░█ █▀▀ █░█░█ █▀ █▀▀ ▄▀█ ▀█▀ █▀▀ █░█ █▀▀ █▀█
-█▄█ ░█░   █░▀█ ██▄ ▀▄▀▄▀ ▄█ █▄▄ █▀█ ░█░ █▄▄ █▀█ ██▄ █▀▄
 </code></pre></div>
 <p>Welcome to the documentation for Free News API by <a href="https://newscatcherapi.com/">NewsCatcher</a>!</p>
 
@@ -383,7 +366,7 @@ This is an absolutely free API for all your non-commercial use cases! No credit 
 
 <p>We did it because we saw many developers, indie hackers, students, data scientsts, etc. willing to build something &quot;cool&quot; &amp; non-commercial with news data. </p>
 
-<p>Free News API features:</p>
+<p>№№ Free News API features</p>
 
 <ul>
 <li>unlimited API calls (1 call/second rate limit)</li>
@@ -393,14 +376,11 @@ This is an absolutely free API for all your non-commercial use cases! No credit 
 
 <aside class="warning">This API is in the test mode until the May 1st. Historical data (news articles) begins from the 1st of April.</aside>
 
-<p>This example API documentation page was created with <a href="https://github.com/slatedocs/slate">Slate</a>. That&#39;s a super cool &amp; open-sourced tool to write documentations!</p>
-<h1 id='contributors'>Contributors</h1><div class="highlight"><pre class="highlight plaintext"><code>█░█ █▀█ █░█░█   ▀█▀ █▀█   █▄▄ █▀▀ █▀▀ █▀█ █▀▄▀█ █▀▀
-█▀█ █▄█ ▀▄▀▄▀   ░█░ █▄█   █▄█ ██▄ █▄▄ █▄█ █░▀░█ ██▄
-
-▄▀█   █▀█ █▀█ █░█░█ █▀▀ █▀█   █░█ █▀ █▀▀ █▀█
-█▀█   █▀▀ █▄█ ▀▄▀▄▀ ██▄ █▀▄   █▄█ ▄█ ██▄ █▀▄
-</code></pre></div>
-<p>&quot;Contributors&quot; have more access to the Free News API. </p>
+<p>This API documentation page was created with <a href="https://github.com/slatedocs/slate">Slate</a>. That&#39;s a super cool &amp; open-sourced tool to write documentations!</p>
+<h1 id='contributors'>Contributors</h1>
+<aside class="notice">
+    "Contributors" have more access to the Free News API. 
+</aside>
 
 <table><thead>
 <tr>
@@ -421,8 +401,8 @@ This is an absolutely free API for all your non-commercial use cases! No credit 
 </tr>
 <tr>
 <td><strong>Sources</strong></td>
+<td style="text-align: center">~top 600<br>(~80k articles/day)</td>
 <td style="text-align: center">~top 250<br>(~40k articles/day)</td>
-<td style="text-align: center">~top 500<br>(~800k articles/day)</td>
 </tr>
 <tr>
 <td><strong>Filters</strong></td>
@@ -576,12 +556,10 @@ This is an absolutely free API for all your non-commercial use cases! No credit 
         </span><span class="nl">"size"</span><span class="p">:</span><span class="w"> </span><span class="mi">25</span><span class="w">
     </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre></div><h1 id='api-specs'>API Specs</h1><div class="highlight"><pre class="highlight plaintext"><code>▄▀█ █▀█ █   █▀ █▀█ █▀▀ █▀▀ █▀
-█▀█ █▀▀ █   ▄█ █▀▀ ██▄ █▄▄ ▄█
-</code></pre></div>
-<p>There is only one endpoint called &#39;search&#39;</p>
-
-<hr>
+</span></code></pre></div><h1 id='api-specs'>API Specs</h1>
+<aside class="notice">
+    There is only one endpoint called "/v1/search"
+</aside>
 <h2 id='request-parameters'>Request Parameters</h2>
 <table><thead>
 <tr>
@@ -606,7 +584,7 @@ This is an absolutely free API for all your non-commercial use cases! No credit 
 <tr>
 <td><code>lang</code></td>
 <td style="text-align: center"><em>string</em></td>
-<td></td>
+<td>Following languages are also changing the searching model: <code>af</code>, <code>ar</code>, <code>bg</code>, <code>bn</code>, <code>ca</code>, <code>cn</code>, <code>cs</code>, <code>cy</code>, <code>da</code>, <code>de</code>, <code>el</code>, <code>en</code>, <code>es</code>, <code>et</code>, <code>fa</code>, <code>fi</code>, <code>fr</code>, <code>gu</code>, <code>he</code>, <code>hi</code>, <code>hr</code>, <code>hu</code>, <code>id</code>, <code>it</code>, <code>ja</code>, <code>kn</code>, <code>ko</code>, <code>lt</code>, <code>lv</code>, <code>mk</code>, <code>ml</code>, <code>mr</code>, <code>ne</code>, <code>nl</code>, <code>no</code>, <code>pa</code>, <code>pl</code>, <code>pt</code>, <code>ro</code>, <code>ru</code>, <code>sk</code>, <code>sl</code>, <code>so</code>, <code>sq</code>, <code>sv</code>, <code>sw</code>, <code>ta</code>, <code>te</code>, <code>th</code>, <code>tl</code>, <code>tr</code>, <code>tw</code>, <code>uk</code>, <code>ur</code>, <code>vi</code></td>
 <td>Specifies the language of the search.<br><br>language formats below(#langformats)</td>
 <td style="text-align: center">[x]</td>
 <td style="text-align: center">[x]</td>
@@ -624,7 +602,7 @@ This is an absolutely free API for all your non-commercial use cases! No credit 
 <tr>
 <td><code>from</code></td>
 <td style="text-align: center"><em>datetime</em></td>
-<td></td>
+<td><code>YYYY/mm/dd</code></td>
 <td>From which point in time to start the search. No specific format is required.<br>Default timezone is UTC</td>
 <td style="text-align: center">[ ]</td>
 <td style="text-align: center">[x]</td>
@@ -633,7 +611,7 @@ This is an absolutely free API for all your non-commercial use cases! No credit 
 <tr>
 <td><code>to</code></td>
 <td style="text-align: center"><em>datetime</em></td>
-<td></td>
+<td><code>YYYY/mm/dd</code></td>
 <td>Until which point in time to search for. Default timezone is UTC</td>
 <td style="text-align: center">[ ]</td>
 <td style="text-align: center">[x]</td>
@@ -880,20 +858,8 @@ This is an absolutely free API for all your non-commercial use cases! No credit 
 </tr>
 <tr>
 <td></td>
-<td><code>summary</code></td>
-<td>first 500 characters of the article body</td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td><code>country</code></td>
-<td>Country of the publisher [experimental]</td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td><code>clean_url</code></td>
-<td>URL of the article&#39;s source</td>
+<td><code>title</code></td>
+<td>Title of the article</td>
 <td></td>
 </tr>
 <tr>
@@ -904,20 +870,38 @@ This is an absolutely free API for all your non-commercial use cases! No credit 
 </tr>
 <tr>
 <td></td>
-<td><code>rights</code></td>
-<td>Copyright</td>
+<td><code>published_date</code></td>
+<td>Published date &amp; time</td>
 <td></td>
 </tr>
 <tr>
 <td></td>
-<td><code>media</code></td>
-<td>Thumbnail media of the article</td>
+<td><code>published_date_precision</code></td>
+<td>Shows how well we think we detected the published date</td>
 <td></td>
 </tr>
 <tr>
 <td></td>
 <td><code>link</code></td>
 <td>Full URL of the article</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><code>clean_url</code></td>
+<td>URL of the article&#39;s source</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><code>summary</code></td>
+<td>first 500 characters of the article body</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><code>rights</code></td>
+<td>Copyright</td>
 <td></td>
 </tr>
 <tr>
@@ -934,26 +918,38 @@ This is an absolutely free API for all your non-commercial use cases! No credit 
 </tr>
 <tr>
 <td></td>
+<td><code>country</code></td>
+<td>Country of the publisher [experimental]</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
 <td><code>language</code></td>
 <td>Language of the article</td>
 <td></td>
 </tr>
 <tr>
 <td></td>
-<td><code>title</code></td>
-<td>Title of the article</td>
+<td><code>authors</code></td>
+<td>Authors of the article</td>
 <td></td>
 </tr>
 <tr>
 <td></td>
-<td><code>published_date_precision</code></td>
-<td>Shows how well we think we detected the published date</td>
+<td><code>media</code></td>
+<td>Thumbnail media of the article</td>
 <td></td>
 </tr>
 <tr>
 <td></td>
-<td><code>published_date</code></td>
-<td>Published date &amp; time</td>
+<td><code>is_opinion</code></td>
+<td>Opinion article or not</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><code>twitter_account</code></td>
+<td>Twitter account of the publisher</td>
 <td></td>
 </tr>
 <tr>
@@ -1071,149 +1067,6 @@ This is an absolutely free API for all your non-commercial use cases! No credit 
 <p>If you see a <code>500</code> status code — that means that something is wrong on our side.</p>
 
 <p>While developing, look at <code>user_input</code> object that returns all of your parameters. If you made a mistake, or some characters were not correctly parsed because of the URL-encoding, you will see that.</p>
-<h1 id='kittens'>Kittens</h1><h2 id='get-all-kittens'>Get All Kittens</h2><div class="highlight"><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">get</span>
-</code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="p">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="n">kittens</span><span class="p">.</span><span class="n">get</span><span class="p">()</span>
-</code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/kittens"</span> <span class="se">\</span>
-  <span class="nt">-H</span> <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">kittn</span><span class="dl">'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="dl">'</span><span class="s1">meowmeowmeow</span><span class="dl">'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">kittens</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="kd">get</span><span class="p">();</span>
-</code></pre></div>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Fluffums"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"calico"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Max"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unknown"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
-  </span><span class="p">}</span><span class="w">
-</span><span class="p">]</span><span class="w">
-</span></code></pre></div>
-<p>This endpoint retrieves all kittens.</p>
-<h3 id='http-request'>HTTP Request</h3>
-<p><code>GET http://example.com/api/kittens</code></p>
-<h3 id='query-parameters'>Query Parameters</h3>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Default</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>include_cats</td>
-<td>false</td>
-<td>If set to true, the result will also include cats.</td>
-</tr>
-<tr>
-<td>available</td>
-<td>true</td>
-<td>If set to false, the result will include kittens that have already been adopted.</td>
-</tr>
-</tbody></table>
-
-<aside class="success">
-Remember — a happy kitten is an authenticated kitten!
-</aside>
-<h2 id='get-a-specific-kitten'>Get a Specific Kitten</h2><div class="highlight"><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="p">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="n">kittens</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/kittens/2"</span> <span class="se">\</span>
-  <span class="nt">-H</span> <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">kittn</span><span class="dl">'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="dl">'</span><span class="s1">meowmeowmeow</span><span class="dl">'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">max</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
-</code></pre></div>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Max"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unknown"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre></div>
-<p>This endpoint retrieves a specific kitten.</p>
-
-<aside class="warning">Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside>
-<h3 id='http-request-2'>HTTP Request</h3>
-<p><code>GET http://example.com/kittens/&lt;ID&gt;</code></p>
-<h3 id='url-parameters'>URL Parameters</h3>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>ID</td>
-<td>The ID of the kitten to retrieve</td>
-</tr>
-</tbody></table>
-<h2 id='delete-a-specific-kitten'>Delete a Specific Kitten</h2><div class="highlight"><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="p">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="n">kittens</span><span class="p">.</span><span class="n">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/kittens/2"</span> <span class="se">\</span>
-  <span class="nt">-X</span> DELETE <span class="se">\</span>
-  <span class="nt">-H</span> <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">kittn</span><span class="dl">'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="dl">'</span><span class="s1">meowmeowmeow</span><span class="dl">'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">max</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="k">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
-</code></pre></div>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"deleted"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">":("</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre></div>
-<p>This endpoint deletes a specific kitten.</p>
-<h3 id='http-request-3'>HTTP Request</h3>
-<p><code>DELETE http://example.com/kittens/&lt;ID&gt;</code></p>
-<h3 id='url-parameters-2'>URL Parameters</h3>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>ID</td>
-<td>The ID of the kitten to delete</td>
-</tr>
-</tbody></table>
 
       </div>
       <div class="dark-box">
