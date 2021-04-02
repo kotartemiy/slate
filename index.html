@@ -314,6 +314,11 @@
       <ul id="toc" class="toc-list-h1">
           <li>
             <a href="#introduction" class="toc-h1 toc-link" data-title="Introduction">Introduction</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#free-news-api-features" class="toc-h2 toc-link" data-title="Free News API features">Free News API features</a>
+                  </li>
+              </ul>
           </li>
           <li>
             <a href="#contributors" class="toc-h1 toc-link" data-title="Contributors">Contributors</a>
@@ -365,13 +370,11 @@ This is an absolutely free API for all your non-commercial use cases! No credit 
 </aside>
 
 <p>We did it because we saw many developers, indie hackers, students, data scientsts, etc. willing to build something &quot;cool&quot; &amp; non-commercial with news data. </p>
-
-<p>№№ Free News API features</p>
-
+<h2 id='free-news-api-features'>Free News API features</h2>
 <ul>
 <li>unlimited API calls (1 call/second rate limit)</li>
 <li>~80,000 news articles per day for <a href="#contributors">contributors</a> (~40,000 for basic users)</li>
-<li>filter by keyword, language,  country, source, published time for contributors (just keyword &amp; language by default)</li>
+<li>filter by keyword, language, topic, country, source, published time for contributors (just keyword &amp; language by default)</li>
 </ul>
 
 <aside class="warning">This API is in the test mode until the May 1st. Historical data (news articles) begins from the 1st of April.</aside>
@@ -585,7 +588,7 @@ This is an absolutely free API for all your non-commercial use cases! No credit 
 <td><code>lang</code></td>
 <td style="text-align: center"><em>string</em></td>
 <td>Following languages are also changing the searching model: <code>af</code>, <code>ar</code>, <code>bg</code>, <code>bn</code>, <code>ca</code>, <code>cn</code>, <code>cs</code>, <code>cy</code>, <code>da</code>, <code>de</code>, <code>el</code>, <code>en</code>, <code>es</code>, <code>et</code>, <code>fa</code>, <code>fi</code>, <code>fr</code>, <code>gu</code>, <code>he</code>, <code>hi</code>, <code>hr</code>, <code>hu</code>, <code>id</code>, <code>it</code>, <code>ja</code>, <code>kn</code>, <code>ko</code>, <code>lt</code>, <code>lv</code>, <code>mk</code>, <code>ml</code>, <code>mr</code>, <code>ne</code>, <code>nl</code>, <code>no</code>, <code>pa</code>, <code>pl</code>, <code>pt</code>, <code>ro</code>, <code>ru</code>, <code>sk</code>, <code>sl</code>, <code>so</code>, <code>sq</code>, <code>sv</code>, <code>sw</code>, <code>ta</code>, <code>te</code>, <code>th</code>, <code>tl</code>, <code>tr</code>, <code>tw</code>, <code>uk</code>, <code>ur</code>, <code>vi</code></td>
-<td>Specifies the language of the search.<br><br>language formats below(#langformats)</td>
+<td>Specifies the language of the search.</td>
 <td style="text-align: center">[x]</td>
 <td style="text-align: center">[x]</td>
 <td></td>
@@ -620,7 +623,7 @@ This is an absolutely free API for all your non-commercial use cases! No credit 
 <tr>
 <td><code>country</code></td>
 <td style="text-align: center"><em>string</em></td>
-<td>2-letter<br>code. US, for example.</td>
+<td><a href="https://www.iban.com/country-codes">2-letter code</a>. US, for example.</td>
 <td>Country to which you want to narrow your search. This parameter is [experimental]. <br>We advise you to use it in conjunction with the <code>lang</code> parameter.</td>
 <td style="text-align: center">[ ]</td>
 <td style="text-align: center">[x]</td>
@@ -629,7 +632,7 @@ This is an absolutely free API for all your non-commercial use cases! No credit 
 <tr>
 <td><code>topic</code></td>
 <td style="text-align: center"><em>string</em></td>
-<td><code>news</code>, <code>sport</code>, <br><code>tech</code>, <code>world</code>, <br><code>finance</code>, <code>politics</code>, <br><code>business</code>, <code>economics</code>, <code>entertainment</code></td>
+<td><code>news</code>, <code>sport</code>, <br><code>tech</code>, <code>world</code>, <br><code>finance</code>, <code>politics</code>, <br><code>business</code>, <code>economics</code>, <code>entertainment</code>, <br><code>beauty</code>, <code>gaming</code></td>
 <td>The topic to which you want to restrict the articles of your choice. <br>This parameter is [experimental].</td>
 <td style="text-align: center">[ ]</td>
 <td style="text-align: center">[x]</td>
